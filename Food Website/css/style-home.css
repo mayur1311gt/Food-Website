@@ -1,0 +1,578 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 0.1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ################# utilities ################# */
+
+.small-size {
+    font-size: 1.5rem;
+}
+
+.medium-size {
+    font-size: 2rem;
+}
+
+.large-size {
+    font-size: 2.5rem;
+}
+
+.extra-large-size {
+    font-size: 3rem;
+}
+
+.regular-weight {
+    font-weight: 400;
+}
+
+.medium-weight {
+    font-weight: 500;
+}
+
+.semi-bold-weight {
+    font-weight: 600;
+}
+
+.bold-weight {
+    font-weight: 700;
+}
+
+.font-white {
+    color: white;
+}
+
+/* ################## Header ################## */
+
+/* ################# hamburger box ################### */
+
+.nav-container {
+    position: relative;
+}
+
+.nav-container input[type="checkbox"] {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+}
+
+.hamburger-lines {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    /* opacity: 0; */
+}
+
+.hamburger-lines .line {
+    display: block;
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 5px;
+    background: black;
+}
+
+.nav-container input[type="checkbox"], .nav-container .hamburger-lines {
+    display: none;
+}
+
+/* #################### navbar styling ##################### */
+
+.navbar {
+    box-shadow: 0px 5px 10px 0px #aaa;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: white;
+    opacity: 0.7;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    padding-top: 0.5rem;
+}
+
+.menubar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menubar-items {
+    display: flex;
+}
+
+.menubar-items .item {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.menubar-items .item a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0px 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.menubar-items .item a:hover {
+    color: green;
+}
+
+/* ################## Home styling ################# */
+
+.section1 {
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("/img/pexels-ella-olsson-1640770.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.container1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container1 p {
+    padding-bottom: 1rem;
+}
+
+.btn1 {
+    display: inline-block;
+    text-decoration: none;
+    background: red;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn1:hover {
+    background: #d21404;
+}
+
+/* ###################### About styling #################### */
+
+.section2 {
+    padding: 5rem;
+}
+
+.container2 {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.text-box {
+    width: 55%;
+    padding: 2rem;
+    margin: auto;
+    transform: translateX(-150%);
+    animation-name: text-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes text-animation {
+    100% {
+        transform: translate(0);
+    }
+}
+
+.img-box {
+    width: 45%;
+    transform: translateX(150%);
+    animation-name: img-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes img-animation {
+    100% {
+        transform: translate(0);
+    }
+}
+
+.img-box img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.text-box h1 {
+    margin-bottom: 1rem;
+}
+
+.text-box p {
+    margin-bottom: 1rem;
+}
+
+/* ######################### Category styling ######################### */
+
+.section3 {
+    padding: 5rem;
+    text-align: center;
+}
+
+.section3 h1 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.container3 {
+    max-width: 1200px;
+    max-height: 30rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.food-img {
+    height: 100%;
+}
+
+.food-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.food-type {
+    flex-basis: 30%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+
+.food-type::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.food-content {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.food-type:hover .food-content {
+    opacity: 1;
+    top: 50%;
+}
+
+.food-type:hover::after {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.food-content a {
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.btn2 {
+    display: block;
+    background: red;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* ##################### menu styling ################# */
+
+.section4 {
+    padding: 5rem;
+}
+
+.menu-heading {
+    margin: 3rem auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.food-item {
+    width: 49%;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-item .item-img img {
+    display: block;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.food-item .item-content {
+    padding: 5rem 0rem 5rem 2rem;
+    margin: auto 0;
+}
+
+.item-content .price {
+    color: #117964;
+}
+
+/* ############### Testimonial styling ############### */
+
+.section5 {
+    padding: 5rem;
+}
+
+.testimonial-heading {
+    margin: 3rem auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container5 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+    display: flex;
+}
+
+.div-contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.person img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-position: centre;
+    object-fit: cover;
+}
+
+.review {
+    margin-bottom: 2rem;
+}
+
+.div-contact i {
+    font-size: 2rem;
+    color: darkorange;
+    margin-bottom: 2rem;
+}
+
+/* ############# footer styling ############## */
+
+.footer h2 {
+    padding: 3rem;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    background: rgb(65, 65, 65);
+}
+
+/* ################### media queries ###################### */
+
+@media (max-width: 600px){
+    
+    html{
+        font-size: 50%;
+    }
+    
+    .container2{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .container2 .text-box{
+        width: 100%;
+    }
+
+    .container2 .img-box{
+        width: 100%;
+    }
+
+    .container3{
+        display: flex;
+        flex-direction: column;
+        max-height: none;
+        align-items: center;
+    }
+
+    .container3 .food-type{
+        width: 80%;
+        height: 30rem;
+        margin-bottom: 2rem;
+    }
+
+    
+}
+
+
+@media (max-width: 750px) {
+
+    .menubar{
+        display: block;
+        height: 100vh;
+        width: 25rem;
+        margin: 0;
+        padding: 0;
+        background: white;
+        transform: translateX(-150%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menubar h1{
+        display: none;
+    }
+
+    .menubar-items{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 6rem;
+        left: 5rem;
+    }
+
+    .menubar-items .item{
+        padding: 1rem;
+    }
+
+    .navbar{
+        height: 6rem;
+        padding: 0;
+    }
+
+    .nav-container{
+        position: relative;
+        height: 100vh;
+        width: 25rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    
+
+    .nav-container input[type="checkbox"]{
+        display: block;
+        position: absolute;
+        height: 3rem;
+        width: 3rem;
+        top: 2rem;
+        left: 2.5em;
+        opacity: 0;
+    }
+
+    .nav-container .hamburger-lines{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        height: 2.5rem;
+        width: 3rem;
+        top: 2rem;
+        left: 3.5em;
+    }
+
+    .hamburger-lines .line1{
+        transform-origin: 0 0;
+    }
+    .hamburger-lines .line3{
+        transform-origin: 0 100%;
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .menubar{
+        transform: translateX(0%);
+    }
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        display: none;
+    }
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+    
+}
+
+@media (max-width: 900px) {
+    .container4 {
+        display: flex;
+        flex-direction: column;
+    }
+    .food-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .food-item .item-content {
+        text-align: center;
+        padding: 2rem 0rem;
+    }
+
+    .container5{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div-contact{
+        margin-bottom: 2rem;
+    }
+}
+
+
+@media (orientation: landscape) and (max-height: 500px){
+    .section1{
+        height: 50vmax;
+    }
+}
